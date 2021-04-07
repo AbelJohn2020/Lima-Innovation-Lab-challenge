@@ -1,11 +1,19 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { getPosts, getUser, getUsers } from './utils/getData';
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Lima Innovation Lab Challenge</h1>
-    </div>
-  );
-}
+const App = () => {
+    const [data, setData] = useState(null);
+    getPosts();
+    getUser('0F8JIqi4zwvb77FGz6Wt')
+    useEffect(() => {
+        getUsers(setData)
+    }, []);
 
-export default App;
+    return (
+        <div>
+           {JSON.stringify(data)}
+        </div>
+    );
+};
+
+export { App };
