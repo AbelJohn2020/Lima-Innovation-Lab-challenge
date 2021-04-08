@@ -2,13 +2,11 @@ import React, { useState, useEffect } from 'react'
 import './posts.css';
 import axios from 'axios';
 import { BASE_URL } from '../../app/config';
-import {getComments} from '../../utils/index';
-import Post from './Post';
+import PostItem from './PostItem';
 
 const APP_ID = `${process.env.REACT_APP_API_ID}`;
 
 const Posts = () => {
-
     const [loadingPosts, setLoadingPosts] = useState(false);
     const [posts, setPosts] = useState();
 
@@ -20,12 +18,11 @@ const Posts = () => {
             .finally(() => setLoadingPosts(false));
     }, []);
 
-
     return (
         <div className="Posts">
             {loadingPosts && <h1>Loading Posts ...</h1>}
             {posts && posts.map(post => (
-                <Post 
+                <PostItem 
                     key={post.id}
                     postId={post.id}
                     text={post.text}

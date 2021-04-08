@@ -25,3 +25,6 @@ export const getComments =  (postId) => {
     axios.get(`${BASE_URL}/post/${postId}/comment`, { headers: { 'app-id': APP_ID } })
 }
 
+export const getUserProfie = (userId) => {
+    axios.get(`${BASE_URL}/user/${userId}/`, { headers: { 'app-id': APP_ID } })
+}
