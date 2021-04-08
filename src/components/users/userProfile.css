@@ -1,0 +1,35 @@
+@import '../../global.css';
+
+.Profile {
+    position: absolute;
+    top: 32%;
+    right: 42%;
+    background: white;
+
+    width: 320px;
+    height: 400px;
+}
+
+.ProfileFixed {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 8px;
+}
+
+.ProfilePhoto {
+    width: 280px;
+    height: 300px;
+    border-radius: 500px;
+    margin: 0 0 16px 0;
+}
+
+.ProfileFirstName,
+.ProfileFirstLastName {
+    font-family: 'Montserrat';
+    font-size: 16px;
+    font-weight: 600;
+    font-style: normal;
+}

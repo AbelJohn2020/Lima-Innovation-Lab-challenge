@@ -91,3 +91,10 @@
     background: #D8D8D8;
     color: white;
 }
+
+.Loading {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}

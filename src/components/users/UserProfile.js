@@ -1,9 +1,14 @@
 import React from 'react';
+import './userProfile.css'
 
-const UserProfile = () => {
+const UserProfile = ({firstName, lastName, picture, }) => {
     return (
-        <div>
-           <h1>Profile Item</h1> 
+        <div className="Profile">
+            <div className="ProfileFixed">
+                <img src={picture} alt={firstName} className="ProfilePhoto"/>
+                <p className="ProfileFirstName">{firstName}</p>
+                <p className="ProfileLastName">{lastName}</p>
+            </div>
         </div>
     );
 };
