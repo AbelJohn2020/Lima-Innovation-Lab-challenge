@@ -5,7 +5,6 @@ import { BASE_URL } from '../../app/config';
 import CommentItem from '../comments/CommentItem';
 import './posts.css';
 import { BiLike } from 'react-icons/bi';
-import UserProfile from '../users/UserProfile';
 
 
 const APP_ID = `${process.env.REACT_APP_API_ID}`;
@@ -16,7 +15,6 @@ const Post = ({postId, text, image, likes, tags, publishDate, owner,}) => {
     const [comments, setComments] = useState(null);
     const [hiddenComents, setHiddenComents] = useState(false);
     const [profile, setProfile] = useState(false);
-    console.log(tags);
 
     const handleCommets = (id) => {
         try {

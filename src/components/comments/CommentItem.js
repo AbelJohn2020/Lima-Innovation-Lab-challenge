@@ -10,20 +10,21 @@ const APP_ID = `${process.env.REACT_APP_API_ID}`;
 const CommentItem = ({owner, publishDate, message, profile, setProfile}) => {
     const {firstName, lastName, picture, id} = owner;
     const [isLoading, setIsLoading] = useState(false);
-    // const [userData, setUserData] = useState(null);
-
+    const [userData, setUserData] = useState(null);
     const handleGetProfile = (userId) => {
         try {
             setIsLoading(true);
-            axios.get(`${BASE_URL}/post/${id}/comment`, { headers: { 'app-id': APP_ID } })
+            axios.get(`${BASE_URL}/user/${userId}`, { headers: { 'app-id': APP_ID } })
             .then(({ data }) => {
-                console.log(data);
+                setUserData(data)
                 setIsLoading(false);
             })
         } catch (error) {
             console.error(error);
         }
     };
+    
+    console.log(userData)
 
     return (
         <div>
@@ -37,6 +38,7 @@ const CommentItem = ({owner, publishDate, message, profile, setProfile}) => {
                         firstName={firstName}
                         lastName={lastName} 
                         picture={picture} 
+                        userData={userData}
                     />
                 }
                 <div className="Comments">
