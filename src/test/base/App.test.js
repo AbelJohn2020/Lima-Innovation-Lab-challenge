@@ -6,5 +6,4 @@ describe('Test in <App />', () => {
         const wrapper = shallow( <App />);
         expect(wrapper).toMatchSnapshot();
     });
-    
 });
