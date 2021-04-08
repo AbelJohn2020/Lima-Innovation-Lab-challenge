@@ -3,12 +3,22 @@
     margin: 0;
     display: flex;
     flex-direction: column;
-    background: rgb(115, 115, 207);
+    background: #E8E8E8;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+.ContainerPost {
+    margin: 16px 8px;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .NamePost,
 .BoxImage {
-    margin: 4px 8px;
     width: 200px;
 }
 
@@ -21,6 +31,8 @@
 .CardImage {
     width: 200px; 
     height: 200px;
+    padding: 4px 0;
+    margin: 0;
 }
 
 .PostImage{
@@ -33,4 +45,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.ButtonPost {
+    margin: 8px 0 0 0;
+    padding: 2px 4px;
+    border-radius: 8px;
+    outline: none;
+    border: none;
 }

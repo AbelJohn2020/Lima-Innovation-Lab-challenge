@@ -25,7 +25,7 @@ const Post = ({postId, text, image, likes, tags, publishDate, owner}) => {
     };
 
     return (
-        <div>
+        <div className="ContainerPost">
             <div className="NamePost">{text}</div>
             <div className="BoxImage">
                 <div className="CardImage">
@@ -36,11 +36,11 @@ const Post = ({postId, text, image, likes, tags, publishDate, owner}) => {
                     <div>Author: {`${firstName} ${lastName}`}</div>
                     <div>Title: {title}</div>
                     <div>{publishDate}</div>
+                    <button onClick={() => handleCommets(postId)} className="ButtonPost">
+                        Show Comments
+                    </button>
                 </div>
             </div>
-            <button onClick={() => handleCommets(postId)}>
-                Show Comments
-            </button>
             <div style={{backgroundColor: 'red'}}>
                 {loadingComments && <h1>Loading Comments ...</h1>}
                 {comments && comments.map(comment => (
