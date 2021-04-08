@@ -1,19 +1,17 @@
 import React, { useEffect, useState } from 'react';
-import { getPosts, getUser, getUsers } from './utils/getData';
+import Posts from './components/post/Posts';
+import Users from './components/users/UserProfile';
+import './app.css';
+import Header from './components/header/Header';
 
 const App = () => {
-    const [data, setData] = useState(null);
-    getPosts();
-    getUser('0F8JIqi4zwvb77FGz6Wt')
-    useEffect(() => {
-        getUsers(setData)
-    }, []);
-
     return (
-        <div>
-           {JSON.stringify(data)}
+        <div className="AppContainer">
+          <Header />
+          <Users />
+          <Posts />
         </div>
     );
 };
 
-export { App };
+export default App;

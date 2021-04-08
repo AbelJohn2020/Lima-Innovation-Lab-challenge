@@ -1,0 +1,9 @@
+@import '../../global.css';
+
+.Title {
+    color: rgb(48, 48, 211);
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-style: normal;
+    font-size: 24px;
+}

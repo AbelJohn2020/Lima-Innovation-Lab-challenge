@@ -1,0 +1,36 @@
+.Posts {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background: rgb(115, 115, 207);
+}
+
+.NamePost,
+.BoxImage {
+    margin: 4px 8px;
+    width: 200px;
+}
+
+.NamePost {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.CardImage {
+    width: 200px; 
+    height: 200px;
+}
+
+.PostImage{
+    width: 100%;
+    height: 100%;
+}
+
+.PostInformation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
